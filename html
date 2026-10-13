@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leves Passos by Daya — calçados e acessórios.">
+  <title>Leves Passos by Daya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="barra-topo">
+    LEVES PASSOS BY DAYA · ESTILO EM CADA PASSO
+  </div>
+
+  <header id="inicio">
+    <a class="logo" href="#inicio">
+      ◯ <span>LEVES PASSOS<small>BY DAYA</small></span>
+    </a>
+
+    <form id="formBusca">
+      <input id="campoBusca" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+      <button type="submit">⌕</button>
+    </form>
+
+    <button id="abrirCarrinho">
+      ♡ Sacola <b id="contadorCarrinho">0</b>
+    </button>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#produtos" data-filtro="Todos">Todos</a>
+    <a href="#produtos" data-filtro="Sandálias">Sandálias</a>
+    <a href="#produtos" data-filtro="Tênis">Tênis</a>
+    <a href="#produtos" data-filtro="Sapatos">Sapatos</a>
+    <a href="#produtos" data-filtro="Bolsas">Bolsas</a>
+    <a href="#produtos" data-filtro="Acessórios">Acessórios</a>
+    <a href="#sobre">Sobre</a>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <p class="etiqueta">LEVES PASSOS BY DAYA</p>
+      <h1>Seu estilo.<br><em>Seu momento.</em></h1>
+      <p>Calçados e acessórios para acompanhar você em todos os momentos.</p>
+      <a class="botao" href="#produtos">Conheça a coleção ↗</a>
+    </div>
+    <img src="produtos/produto-001.jpg" alt="Calçado do catálogo">
+  </section>
+
+  <section class="beneficios">
+    <span>♡ Atendimento personalizado</span>
+    <span>✧ Modelos para você</span>
+    <span>◇ Compra prática</span>
+  </section>
+
+  <main id="produtos">
+    <p class="etiqueta">ESCOLHA SEU FAVORITO</p>
+    <h2>Nossa vitrine</h2>
+    <p>Consulte cores, numeração, preço e disponibilidade com a loja.</p>
+
+    <div id="filtros">
+      <button data-filtro="Todos" class="ativo">Todos</button>
+      <button data-filtro="Sandálias">Sandálias</button>
+      <button data-filtro="Tênis">Tênis</button>
+      <button data-filtro="Sapatos">Sapatos</button>
+      <button data-filtro="Bolsas">Bolsas</button>
+      <button data-filtro="Acessórios">Acessórios</button>
+
+      <label>
+        Ordenar
+        <select id="ordenacao">
+          <option value="destaque">Destaques</option>
+          <option value="nome">Nome</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="gradeProdutos"></div>
+    <p id="semResultados" hidden>
+      Não encontramos produtos com essa busca.
+    </p>
+  </main>
+
+  <section class="sobre" id="sobre">
+    <h2>Leves passos, <em>grandes momentos.</em></h2>
+    <p>Calçados e acessórios para valorizar seu estilo.</p>
+    <p>
+      Instagram:
+      <a href="https://www.instagram.com/leves_passos/" target="_blank">
+        @leves_passos
+      </a>
+    </p>
+  </section>
+
+  <section class="contato" id="contato">
+    <h2>Vamos conversar?</h2>
+    <button id="falarLoja" class="botao">
+      Chamar no WhatsApp ↗
+    </button>
+  </section>
+
+  <footer>© 2026 Leves Passos by Daya</footer>
+
+  <div id="fundoModal" hidden>
+    <section class="painel">
+      <div class="topo">
+        <h2>Minha sacola</h2>
+        <button id="fecharCarrinho">×</button>
+      </div>
+
+      <div id="itensCarrinho"></div>
+      <p>Total estimado: <strong id="totalCarrinho">R$ 0,00</strong></p>
+      <small>Preços e frete a confirmar.</small>
+
+      <button id="finalizarPedido" class="botao">
+        Enviar pedido pelo WhatsApp
+      </button>
+      <button id="limparCarrinho">Esvaziar sacola</button>
+    </section>
+  </div>
+
+  <script src="leve.passos.js"></script>
+</body>
+</html>
